@@ -1,0 +1,8 @@
+<div *ngIf="note$ | async as note; else: loading">
+  <h1>{{note.topic}} ({{note.id}})</h1>
+  <p>{{note.description}}</p>
+</div>
+
+<ng-template #loading>
+  Loading...
+</ng-template>
